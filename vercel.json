@@ -5,6 +5,7 @@
       "src": "server.js",
       "use": "@vercel/node",
       "config": {
+        "maxDuration": 30,
         "includeFiles": ["db/**", "public/**", "node_modules/sql.js/dist/**"]
       }
     }
@@ -14,10 +15,5 @@
       "src": "/(.*)",
       "dest": "server.js"
     }
-  ],
-  "functions": {
-    "server.js": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
